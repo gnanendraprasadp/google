@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+</style>
+
+<script type="text/javascript">
+
+  function finallink(){
+  var x = document.google.kword.value;
+	if (x == "" || x == null) 
+  {
+    alert("Enter a keyword to continue");
+    return false;
+  }    
+
+        
+    var keyword=document.google.kword.value;
+    {
+    	var str = "Open the Link";
+  		var result1 = str.link("https://www.google.com/search?q="+keyword);
+    	document.getElementById("result").innerHTML=result1;
+        }
+        
+         var keyword1=document.google.kword.value;
+   		 {
+    	document.getElementById("link").innerHTML='https://www.google.com/search?q='+keyword1;
+        }
+        
+        
+     
+  }
+</script>
+
+</head>
+<body>
+<br>
+<h2><center>Google Search Engine Search URL Generator</center></h2>
+<h3><center>By Gnanendra Prasad</center></h3>
+
+
+<center>
+<form  name="google">
+
+	  Enter Keyword which links to Google Search: <br><br><input type="text" name="kword" id="kyword"><br><br>
+    <input type="button" class="button button1" value="Get the Link" onclick="finallink();">
+</form> <br>
+</center>
+
+<center><p>Your URL is:</p></center>
+
+
+<center><p id="link"></p></center>
+
+
+<center><p id="result"></p></center>
+
+<br><br><br><br><br><br><br><br><br>
+<h3>
+  <p><center>Connect me with<br>
+  <a href="https://github.com/gnanendraprasadp">Github</a></center></p>
+</h3>
+
+</body>
+</html>
