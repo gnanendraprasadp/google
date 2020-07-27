@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.button1 {background-color: #67FD02;} /* Green */
+.button1 {background-color: #FD0202;} /* Green */
 </style>
 	
 <style> 
@@ -51,6 +51,49 @@ footer {
   margin: 0;
   border-radius: 25px;
 }
+	
+	<script language="JavaScript">
+
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+	
+	
 </style> 
 
 <script type="text/javascript">
@@ -81,13 +124,6 @@ StatCounter"></a></div></noscript>
         
     var keyword=document.google.kword.value;
     {
-	          document.getElementById("result").style.color = "#67FD02";
-		  document.getElementById("result1").style.color = "#67FD02";
-		  document.getElementById("result2").style.color = "#67FD02";
-		  document.getElementById("result3").style.color = "#67FD02";
-		  document.getElementById("result4").style.color = "#67FD02";
-		  document.getElementById("result5").style.color = "#67FD02";
-		  document.getElementById("result6").style.color = "#67FD02";
 
     ///1///
     	var str = "Open in Google Now";
@@ -166,8 +202,8 @@ StatCounter"></a></div></noscript>
 </head>
 <body>
 <br>
-<h2><center>Keyword to Search Engine URL Generator</center></h2>
-<h3 style="color:#67FD02;"><center>By Gnanendra Prasad</center></h3>
+<h2><center>Keyword to Search Engine URL Generator By</center></h2>
+<h3 style="color:#FD0202;"><center>Gnanendra Prasad</center></h3>
 
 
 <center>
@@ -204,7 +240,7 @@ StatCounter"></a></div></noscript>
 
 <footer>
   <div><p>Connect to me on<br>
-  <a style="color:#67FD02;" href="https://github.com/gnanendraprasadp">GitHub</a></p></div>
+  <a style="color:#FD0202;" href="https://github.com/gnanendraprasadp">GitHub</a></p></div>
 </footer>
 
 </body>
